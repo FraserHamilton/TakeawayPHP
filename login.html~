@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Log in</title>
+</head>
+
+<body>
+	<h3>ADMIN ONLY</h3>
+	
+	<p>Enter username and password below:</p>
+	</br>
+	
+	<form action="StartService.php" method="post">
+	  <table>
+	    <tr>
+	      <td>Username</td>
+	      <td><input type="text" name="username"/></td>
+	      <td>Password</td>
+	      <td><input type="password" name="password"/></td>
+	    </tr>
+	  </table>
+	  <p><input type="submit" value="Submit"/></p>
+	</form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE Html>
+<html>
+<head>
+	<title>View Customer</title>
+	<meta charset="UTF-8"/>
+</head>
+<body>
+	<p>
+	<a href="CustomerEdit.php">Edit a customer's info</a> &nbsp;&nbsp;
+	<a href="RestaurantInput.php">Add a new restaurant</a>
+	</p>
+	<h1>Search Customer Database</h1>
+	<p>
+	<br/>
+	<form method="post" action="DisplayOneCustomer.php">
+		Enter the Customer ID of the customer you want to know about:
+		&nbsp;
+		<input type="text" size="10" name="customerID"/>
+		<input type="submit" value="Submit"/>
+	</form>
+	<br/>
+	<h2>Search For Specific Terms In Customer Database</h2>
+	<p> Select Fields and then Input Search Term Into Text Box  </p>
+	<br/>
+	<p>
+	Search For <form method="post" action="DisplaySpecificQuery.php">
+	  <select name="for">
+	    <option value="Username">Username</option>
+	    <option value="fullName">Full Name</option>
+	    <option value="Email">Email Address</option>
+	    <option value="Address">Current Address</option>
+	    <option value="City">City</option>
+	    <option value="Postcode">Postcode</option>
+	    <option value="TotalPoints">Loyalty Points</option>
+	  </select>
+	By
+	 <select name="by">
+	    <option value="Username">Username</option>
+	    <option value="fullName">Full Name</option>
+	    <option value="Email">Email Address</option>
+	    <option value="Address">Current Address</option>
+	    <option value="City">City</option>
+	    <option value="Postcode">Postcode</option>
+	  </select>
+	</p>
+	<p>
+	<input type="text" size="10" name="term1" placeholder="Search Term"/>
+	</p>
+	  <input type="submit">
+	</form>
+	
+</body>
+</html>

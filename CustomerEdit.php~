@@ -1,0 +1,20 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors',1);
+
+include("dbfunctions.php");
+session_start();
+?>
+
+<!DOCTYPE Html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>Edit Customer Details</title>
+</head>
+<body>
+<p>
+  <a href="RequestCustomerDetails.html">Find a customer's details</a>
+  <a href="RestaurantInput.php">Add a restaurant</a>
+<h1>Customers</h1>
+
