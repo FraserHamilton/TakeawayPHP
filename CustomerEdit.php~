@@ -37,7 +37,7 @@ $postcode = $_POST["Postcode"];
 $totalPoints = $_POST["TotalPoints"];
 
 
-$query = "UPDATE Customer SET FName = '$firstName', LName = '$lastName', Email = '$email', Address = '$address', City = '$city', Postcode = '$postcode', TotalPoints = '$totalPoints' WHERE Username = '$customerID'";
+$query = "UPDATE Customer SET FName = '$firstName', LName = '$lastName', Email = '$email', Address = '$address', City = '$city', Postcode = '$postcode', TotalPoints = '$totalPoints' WHERE FName = 'Jam'";
 
 print $customerID;
 print $query . "</br>";
