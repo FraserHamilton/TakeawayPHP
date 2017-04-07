@@ -61,6 +61,27 @@ displayVertTable($result);
 
 </br>
 </br>
+</br>
+<p>Total number of orders made by this customer:</p>
+<?php
+  $queryCol = "SELECT * FROM Orders, OrderHistory WHERE CustomerID = '$customerID' AND OrderID = OrderNumber AND OrderType = 'C'";
+  $queryDel = "SELECT * FROM Orders, OrderHistory WHERE CustomerID = '$customerID' AND OrderID = OrderNumber AND OrderType = 'D'";
+
+  $resultCol = runQuery($queryCol);
+  $resultDel = runQuery($queryDel);
+
+  $numRowsCol = mysql_num_rows($resultCol);
+  $numRowsDel = mysql_num_rows($resultDel);
+
+  print ($numRowsCol + $numRowsDel) . " total orders. ";
+
+  print $numRowsCol . " collection orders. ";
+  print $numRowsDel . " delivery orders.";
+
+
+?>
+</br>
+</br>
 <p>Show the total number of orders this customer has made for a specific restaurant</p>
 <form method="post" action="ShowTotalOrders.php">
   <?php
@@ -69,6 +90,7 @@ displayVertTable($result);
   <input type="text" name="restaurantName" placeholder="Restaurant"/>
   <input type="submit" value="Submit"/>
 </form>
+</br>
 
 
 
