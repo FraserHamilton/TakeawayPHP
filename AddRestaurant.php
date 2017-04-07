@@ -14,7 +14,9 @@ include("dbfunctions.php");
 <body>
 	<h1>The data has been successfully entered into our database</h1>
 <p>
-<a href="home.php">Home</a>
+  <a href="RestaurantInput.php">Add a new restaurant</a>
+  <a href="RequestCustomerDetails.html">Find customer details</a>
+</p>
 <br/>
 
 <?php

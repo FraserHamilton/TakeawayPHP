@@ -17,7 +17,6 @@ $_SESSION['password'] = $_POST['password'];
 <body>
 	<h1>Customers</h1>
 	<p>
-		<a href="CustomerEdit.php">Edit a customer's information</a> &nbsp;&nbsp;
 		<a href="RestaurantInput.php">Add a new restaurant</a> &nbsp;&nbsp;
 		<a href="RequestCustomerDetails">Find a customer's details</a> &nbsp;&nbsp;
 	</p>

@@ -15,9 +15,9 @@ session_start();
 	<title>Add a Restaurant</title>
 </head>
 <body>
-	<p>
-	<a href="CustomerEdit.php">Edit a customer's info</a> &nbsp;&nbsp;
-	<a href="RequestCustomerDetails">Find a customer's details</a> &nbsp;&nbsp;
+	<p> 
+          <a href = "RequestCustomerDetails.html">Search customer database</a> <br/>
+	</p>
 	
 	<h1>Restaurants</h1>
 	

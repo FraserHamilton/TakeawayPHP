@@ -15,9 +15,9 @@ include ("dbfunctions.php");
 <body>
 <h1>The data has been successfully entered into our database.</h1>
 <p>
-
-<a href = "CustomerEdit.php" >Edit a customer's info</a>   &nbsp;&nbsp; 
-<a href = "RequestCustomerDetails.html">Search customer database</a> <br/>
+  <a href = "RestaurantInput" >Add a new restaurant</a>   &nbsp;&nbsp; 
+  <a href = "RequestCustomerDetails.html">Search customer database</a> <br/>
+</p>
 <br/>
 <?php
 
@@ -44,7 +44,7 @@ $lpCol = $_POST["lpCol"];
 $query = "INSERT INTO Restaurant VALUES ('$restID', '$lpDel', '$lpCol')";
 
 //remove this line when query comes out looking ok
-print $query . '<br/>';
+
 
 $insResult = mysql_query($query);
 if ($insResult)
