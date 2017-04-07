@@ -59,6 +59,17 @@ displayVertTable($result);
   <input type='submit' value="Edit details">
 </form>
 
+</br>
+</br>
+<p>Show the total number of orders this customer has made for a specific restaurant</p>
+<form method="post" action="ShowTotalOrders.php">
+  <?php
+    print "<input type='hidden' name='customerID' value='$customerID'/>";
+  ?>
+  <input type="text" name="restaurantName" placeholder="Restaurant"/>
+  <input type="submit" value="Submit"/>
+</form>
+
 
 
 </body>
