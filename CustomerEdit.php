@@ -14,8 +14,8 @@ session_start();
 </head>
 <body>
 <p>
-  <a href="RequestCustomerDetails.html">Find a customer's details</a>
-  <a href="RestaurantInput.php">Add a restaurant</a>
+  <a href = "RestaurantInput" >Add a new restaurant</a>   &nbsp;&nbsp; 
+  <a href = "RequestCustomerDetails.html">Search customer database</a> <br/>
 </p>
 <h1>The data has been successfully entered into our database.</h1>
 
@@ -39,8 +39,6 @@ $totalPoints = $_POST["TotalPoints"];
 
 $query = "UPDATE Customer SET FName = '$firstName', LName = '$lastName', Email = '$email', Address = '$address', City = '$city', Postcode = '$postcode', TotalPoints = '$totalPoints' WHERE Username = '$customerID'";
 
-print $customerID;
-print $query . "</br>";
 
 $insResult = mysql_query($query);
 if($insResult){

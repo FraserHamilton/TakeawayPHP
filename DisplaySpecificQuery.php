@@ -18,9 +18,9 @@ session_start();
 <body>
 <h1>Query Info</h1>
 <p>
-<a href = "CustomerEdit.php" >Edit a customer's info</a>   &nbsp;&nbsp; 
-<a href = "RequestCustomerDetails.html">Search customer database</a> <br/>
- </p>
+  <a href = "RestaurantInput" >Add a new restaurant</a>   &nbsp;&nbsp; 
+  <a href = "RequestCustomerDetails.html">Search customer database</a> <br/>
+</p>
 <h2>View a Customer Query</h2>
 
 <?php
