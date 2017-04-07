@@ -3,17 +3,34 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1); 
 session_start();
 include ("dbfunctions.php");
-//print first part of html
+
+$username = $_SESSION['username'];
+$password = $_SESSION['password'];
+
+dbConnect("$username", "$password") ;
+dbSelect("$username");
+
+$restID = $_POST["restaurantID"];
+$lpDel = $_POST["lpDel"];
+$lpCol = $_POST["lpCol"];
 ?>
 <!DOCTYPE html>
 
 <html>
 <head>  
   <meta charset="UTF-8" />
-  <title>Add a Spy</title> 
+  <title>Add a Restaurant</title> 
 </head>
 <body>
-<h1>The data has been successfully entered into our database.</h1>
+<h1>
+  <?php
+    if($restID == null){
+      print "Restaurant was not added to database";
+    }else{
+      print "Restaurant was successfully added to database.";
+    }
+    print "</h1>";
+  ?>
 <p>
   <a href = "RestaurantInput" >Add a new restaurant</a>   &nbsp;&nbsp; 
   <a href = "RequestCustomerDetails.html">Search customer database</a> <br/>
@@ -21,22 +38,10 @@ include ("dbfunctions.php");
 <br/>
 <?php
 
-//////////////////////////////////////////////////////////////////////////////
-//retrieve username and password
-$username = $_SESSION['username'];
-$password = $_SESSION['password'];
-
-//connect to database
-dbConnect("$username", "$password") ;
-dbSelect("$username");
-
-
-//////////////////////////////////////////////////////////////////////////////
-//First pick up the parameters from the form 
-
-$restID = $_POST["restaurantID"];
-$lpDel = $_POST["lpDel"];
-$lpCol = $_POST["lpCol"];
+if($restID == null){
+  print "No restaurant name entered.";
+  exit;
+}
 
 //////////////////////////////////////////////////////////////////////////////
 
@@ -59,3 +64,6 @@ print "</p></body>";
 print "</html>";
 
 ?>
+
+</p></body>
+</html>
