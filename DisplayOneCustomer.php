@@ -34,8 +34,7 @@ dbConnect("$username", "$password") ;
 dbSelect("$username");
 $customerID = $_POST['customerID'];
 
-///////////////////////////////////////////////////////////////////////////
-//display spy details
+
 $query = "SELECT * FROM Customer WHERE Username= '$customerID'";
 $result = runQuery($query);
 $numrows = mysql_num_rows($result);
@@ -48,7 +47,15 @@ if ($numrows == 0)
 print "<h3>Customer with Username = $customerID</h3>";
 displayVertTable($result);
 
+$pointsQuery = "SELECT TotalPoints FROM Customer WHERE Username = '$customerID'";
 
+$pointsResult = runQuery($pointsQuery);
+
+$points = mysql_fetch_row($pointsResult);
+$money = ($points[0] * 5)/100;
+
+print "<h3>Customer's voucher points:</h3>";
+print "<p style='border-style:dotted; width:100px'>£" . $money . "</p>";
 
 ?>
 </br>
@@ -59,9 +66,7 @@ displayVertTable($result);
   <input type='submit' value="Edit details">
 </form>
 
-</br>
-</br>
-</br>
+<h4>Orders - totals and search</h4>
 <p>Total number of orders made by this customer:</p>
 <?php
   $queryCol = "SELECT * FROM Orders, OrderHistory WHERE CustomerID = '$customerID' AND OrderID = OrderNumber AND OrderType = 'C'";
@@ -77,11 +82,8 @@ displayVertTable($result);
 
   print $numRowsCol . " collection orders. ";
   print $numRowsDel . " delivery orders.";
-
-
 ?>
-</br>
-</br>
+
 <p>Show the total number of orders this customer has made for a specific restaurant</p>
 <form method="post" action="ShowTotalOrders.php">
   <?php
