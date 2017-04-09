@@ -49,4 +49,4 @@ if ($numrows == 0)
 	exit();
 }
 print "<h3>Customer with $selection2 = $searchterm</h3>";
-displayVertTable($result);
+displayTable($result);
