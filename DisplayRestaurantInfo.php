@@ -14,8 +14,10 @@ session_start();
 </head>
 <body>
 <p>
-  <a href="RestaurantInput.php">Add a new restaurant</a>
-  <a href="RequestCustomerDetails.html">Search customer database</a>
+  <a href="RestaurantInput">Add a new restaurant</a>   &nbsp;&nbsp; 
+  <a href="RequestCustomerDetails.html">Search customer database</a> &nbsp;&nbsp;
+  <a href="RestaurantInfo.html">Find order info about a restaurant</a> 
+  </br>
 </p>
 <h1>Restaurant order info</h1>
 

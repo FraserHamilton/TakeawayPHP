@@ -32,8 +32,10 @@ $lpCol = $_POST["lpCol"];
     print "</h1>";
   ?>
 <p>
-  <a href = "RestaurantInput" >Add a new restaurant</a>   &nbsp;&nbsp; 
-  <a href = "RequestCustomerDetails.html">Search customer database</a> <br/>
+  <a href="RestaurantInput">Add a new restaurant</a>   &nbsp;&nbsp; 
+  <a href="RequestCustomerDetails.html">Search customer database</a> &nbsp;&nbsp;
+  <a href="RestaurantInfo.html">Find order info about a restaurant</a> 
+  </br>
 </p>
 <br/>
 <?php
