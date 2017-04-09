@@ -40,15 +40,27 @@ print "</br></br>";
 
 $queryC = "SELECT CustomerID FROM Orders, OrderHistory WHERE RestaurantName = '$restID' AND OrderNumber = OrderID AND OrderType = 'C' GROUP BY CustomerID";
 $resultC = runQuery($queryC);
-print "Customers who have placed collection orders at this restaurant:";
-displayTable($resultC);
+$numRows = mysql_num_rows($resultC);
 
-$queryD = "SELECT CustomerID FROM Orders, OrderHistory WHERE RestaurantName = '$restID' AND OrderNumber = OrderID AND OrderType = 'D' GROUP BY CustomerID";
+print "Customers who have placed collection orders at this restaurant:";
+if($numRows > 0){
+  displayTable($resultC);
+}else{
+  print " No orders have been placed.";
+}
 print "</br>";
 
+$queryD = "SELECT CustomerID FROM Orders, OrderHistory WHERE RestaurantName = '$restID' AND OrderNumber = OrderID AND OrderType = 'D' GROUP BY CustomerID";
 $resultD = runQuery($queryD);
+$numRows = mysql_num_rows($resultD);
 print "Customers who have placed delivery orders from at this restaurant:";
-displayTable($resultD);
+if($numRows > 0){
+  displayTable($resultD);
+}else{
+  print " No orders have been placed.";
+}
+
+
 ?>
 
 </body>
