@@ -49,4 +49,4 @@ if ($numrows == 0)
 	exit();
 }
 print "<h3>Restaurant which has $selection2 $searchterm</h3>";
-displayVertTable($result);
+displayTable($result);
