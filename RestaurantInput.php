@@ -16,7 +16,8 @@ session_start();
 </head>
 <body>
 	<p> 
-          <a href = "RequestCustomerDetails.html">Search customer database</a> <br/>
+          <a href = "RequestCustomerDetails.html">Search customer database</a> 
+	  <a href="RestaurantInfo.html">Find order info about a restaurant</a><br/>
 	</p>
 	
 	<h1>Restaurants</h1>
